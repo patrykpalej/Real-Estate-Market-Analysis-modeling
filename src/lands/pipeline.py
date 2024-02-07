@@ -4,13 +4,13 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.compose import ColumnTransformer
 
-from apartments.preprocessing import (apartment_feature_engineering, province_ohencoder,
+from apartments.preprocessing import (apartments_feature_engineering, province_ohencoder,
                                       subregion_ohencoder)
 
 
 column_transformer = ColumnTransformer(
     transformers=[
-        ('feature_engineering', FunctionTransformer(apartment_feature_engineering), ["advert_type", "market", "utc_created_at"]),
+        ('feature_engineering', FunctionTransformer(apartments_feature_engineering), ["advert_type", "market", "utc_created_at"]),
         ("province_encoder", province_ohencoder, ["province"]),
         ("subregion_encoder", subregion_ohencoder, ["subregion"]),
     ],

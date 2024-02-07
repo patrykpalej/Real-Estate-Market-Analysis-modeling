@@ -1,7 +1,6 @@
-from sklearn.preprocessing import FunctionTransformer
+from sklearn.preprocessing import FunctionTransformer, MinMaxScaler, StandardScaler
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.preprocessing import StandardScaler
 from sklearn.compose import ColumnTransformer
 
 from apartments.preprocessing import (apartments_feature_engineering, province_ohencoder,
@@ -24,8 +23,8 @@ pipeline = Pipeline([
 ])
 
 param_grid = {
-    'regressor__n_estimators': [500, 600, 700, 800],
-    'regressor__max_depth': [70, 80, 90, 100],
-    'scaler': [StandardScaler()],
+    'regressor__n_estimators': [600, 650, 700, 750, 800],
+    'regressor__max_depth': [90, 100, 110, 120],
+    'scaler': [StandardScaler(), MinMaxScaler()],
     'regressor': [RandomForestRegressor(n_jobs=-1)]
 }

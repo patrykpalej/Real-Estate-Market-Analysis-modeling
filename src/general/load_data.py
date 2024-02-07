@@ -15,7 +15,7 @@ def load_data(table_name, columns_to_load, shuffle=True):
 
     conn_str = f"postgresql://{username}:{password}@{host}:{port}/{dbname}"
 
-    df = pd.read_sql(f"SELECT * FROM {table_name}", conn_str)[columns_to_load]
+    df = pd.read_sql(f"SELECT * FROM {table_name} LIMIT 9999999", conn_str)[columns_to_load]
 
     if shuffle:
         df = df.sample(len(df), ignore_index=True)

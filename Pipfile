@@ -9,6 +9,7 @@ scikit-learn = "*"
 python-dotenv = "*"
 psycopg2-binary = "*"
 pyyaml = "*"
+google-cloud-storage = "*"
 
 [dev-packages]
 
