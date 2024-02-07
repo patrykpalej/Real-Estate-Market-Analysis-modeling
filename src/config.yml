@@ -1,0 +1,38 @@
+columns_to_load:
+  apartments:
+    - price
+    - advert_type
+    - utc_created_at
+    - province
+    - subregion
+    - market
+    - apartment_area
+    - n_rooms
+    - build_year
+  houses:
+    - price
+    - advert_type
+    - utc_created_at
+    - province
+    - subregion
+    - location
+    - market
+    - lot_area
+    - house_area
+    - n_rooms
+    - build_year
+  lands:
+    - price
+    - advert_type
+    - utc_created_at
+    - province
+    - subregion
+    - location
+    - land_area
+
+dropna_columns:
+  apartments:
+    - build_year
+  houses:
+    - build_year
+  lands: []
