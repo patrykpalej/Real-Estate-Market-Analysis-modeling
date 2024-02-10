@@ -60,5 +60,5 @@ results = {
 }
 
 
-results_label = f"{evironment}_{property_type[:3]}_{datetime.strftime(datetime.now(), '%y%m%d')}_MAPE: {round(mape, 3)}"
+results_label = f"{evironment}_{model}_{property_type[:3]}_{datetime.strftime(datetime.now(), '%y%m%d')}_MAPE: {round(mape, 3)}"
 save_results(results, best_model, results_label, target=dump_target)
