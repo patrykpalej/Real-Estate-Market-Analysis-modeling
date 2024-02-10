@@ -4,15 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-mlflow = "*"
 scikit-learn = "*"
-python-dotenv = "*"
 psycopg2-binary = "*"
 pyyaml = "*"
 google-cloud-storage = "*"
+python-dotenv = "*"
+pandas = "*"
+sqlalchemy = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.10"
-python_full_version = "3.10.12"
+python_version = "3.11"
