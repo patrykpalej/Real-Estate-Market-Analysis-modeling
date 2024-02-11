@@ -44,6 +44,3 @@ def save_results(metadata, best_model, results_label, target="cloud"):
 
         with open(f"models/{results_label}.pickle", "wb") as f:
             pickle.dump(best_model, f)
-
-
-dump_object_to_gcs("rea-metadata", 1, "test")
